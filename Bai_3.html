@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tuổi 1 người biết năm sinh</title>
+</head>
+<body>
+<label for="tuoi">Nhập tuổi</label>
+<input id= "tuoi" type="text" value="">
+<button type="button" onclick="tinh_tuoi()">Tính tuổi</button>
+<script>
+  function tinh_tuoi() {
+      let n = Number(document.getElementById("tuoi").value);
+      let m;
+      if (n <= 2020) {
+          m = 2020 - n
+          document.write("Số tuổi của người đó là: " + m );
+      } else {
+          document.write("Không hợp lệ")
+      }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<button type="button" onclick="tinh_toan()">Tính tổng đường chéo chính</button>
+<p id="mang"></p>
+<script>
+    let n = Number(prompt("Nhập số chiều của mảng"))
+    let b = document.getElementById("mang");
+    let arr = [];
+    let data = "";
+    for (let i = 0; i < n; i++) {
+        arr[i]= new Array(n)
+        for (let j = 0; j < n; j++) {
+            arr[i][j] = Math.floor(Math.random() * 10) + 1;
+        }
+    }
+    for (let i = 0; i < n; i++) {
+        data += "<br/>";
+        for (let j = 0; j < n; j++) {
+            data += arr[i][j] + "&nbsp;&nbsp";
+        }
+    }
+    b.innerHTML = data;
+    function tinh_toan() {
+        let sum = 0;
+        for (let i = 0; i < n; i++) {
+            for (let j = 0; j < n; j++) {
+                if (i==j) {
+                    sum += arr[i][j];
+                }
+            }
+        }
+        document.write("Tổng đường chéo chính ma trận vuông là: " + sum);
+    }
+
+</script>
+
+</body>
+</html>
